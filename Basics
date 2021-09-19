@@ -27,3 +27,29 @@ select count(*) from country where population > 1000000 and Continent = 'Europe'
 select LifeExpectancy,population, Continent from country where population > 1000000 and Continent = 'Europe';
 select count(LifeExpectancy) from country where population > 1000000 and Continent = 'Europe';
 select count(LifeExpectancy) from country;
+
+
+insert_test_data;
+select * from customer;
+
+insert into customer (name, address, city, state, zip)
+  Values('FF', '123 C way' , 'bedrock', 'CA', '90210');
+
+
+insert into customer (name, city, state)
+  Values('FF', 'bedrock', 'CA');
+
+update customer set address = '123 MA', zip = '963258' where id = 7;
+update customer set address = NULL, zip = NULL where id = 7;
+
+
+select * from customer where id = 8;
+
+delete from customer where id = 8;
+select * from customer;
+
+
+delete from customer ;
+select * from customer;
+
+

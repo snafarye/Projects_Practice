@@ -1,0 +1,29 @@
+select * from country; 
+
+select * from sale;
+select * from customer;
+select * from item;
+
+
+##select statments;
+select 'Hello, World';
+select 'Hello, World' AS Result;
+
+select*from country;
+select*from country order by Name;
+select Name, LifeExpectancy from country order by Name;
+select Name, LifeExpectancy as "Life Expectancy " from country order by Name;
+#select Name as "new name", LifeExpectancy as "Life Expectancy " from country order by Name;
+
+
+##select_row;
+Select Name, Continent, Region from country Where continent = 'Europe'order by Name;
+
+select *from country;
+select count(*) from country;
+select count(*) from country where population > 1000000;
+select count(*) from country where population > 1000000 and Continent = 'Europe';
+
+select LifeExpectancy,population, Continent from country where population > 1000000 and Continent = 'Europe';
+select count(LifeExpectancy) from country where population > 1000000 and Continent = 'Europe';
+select count(LifeExpectancy) from country;
